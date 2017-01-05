@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var threePersonLabel: UILabel!
     @IBOutlet weak var fourPersonLabel: UILabel!
     
+    @IBOutlet weak var tipLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,7 +43,11 @@ class ViewController: UIViewController {
         let tip = bill * tipArray[tipPercentage.selectedSegmentIndex]
         let total = bill + tip
         
+        tipLabel.text = String(format: "%.2f", tip)
         onePersonLabel.text = String(format: "%.2f", total)
+        twoPersonLabel.text = String(format: "%.2f", total/2)
+        threePersonLabel.text = String(format: "%.2f", total/3)
+        fourPersonLabel.text = String(format: "%.2f", total/4)
     }
     
 

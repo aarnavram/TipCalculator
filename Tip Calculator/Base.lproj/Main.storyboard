@@ -137,7 +137,7 @@
                                             <constraint firstAttribute="height" constant="39" id="41M-n5-Ajb"/>
                                             <constraint firstAttribute="width" constant="179" id="bo4-uk-dnK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -146,7 +146,7 @@
                                             <constraint firstAttribute="width" constant="179" id="neX-0S-Hot"/>
                                             <constraint firstAttribute="height" constant="39" id="sNd-sb-FmB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -155,7 +155,7 @@
                                             <constraint firstAttribute="width" constant="179" id="EiD-ur-sUR"/>
                                             <constraint firstAttribute="height" constant="39" id="N3s-7n-K8g"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -164,25 +164,41 @@
                                             <constraint firstAttribute="width" constant="179" id="RNy-rZ-0ch"/>
                                             <constraint firstAttribute="height" constant="39" id="Sbf-Ei-KRd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-ss-o9h">
+                                <frame key="frameInset" minX="16" minY="279" width="65" height="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-sO-8iU">
+                                <frame key="frameInset" minX="294" minY="279" width="65" height="31"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="IKG-0T-0rF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="1HZ-tL-4cy"/>
                             <constraint firstItem="XNn-gm-d2d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Yy-OS-IXU"/>
+                            <constraint firstItem="2G1-sO-8iU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8rQ-L2-VC2"/>
                             <constraint firstItem="IKG-0T-0rF" firstAttribute="trailing" secondItem="XNn-gm-d2d" secondAttribute="trailing" id="BUJ-xN-x2D"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dLh-El-xeB" secondAttribute="bottom" constant="101" id="CfC-Wx-EZa"/>
                             <constraint firstItem="GPr-U0-xeN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="Eyx-cd-MKo"/>
                             <constraint firstAttribute="trailing" secondItem="9Ls-qW-5GU" secondAttribute="trailing" id="Fsm-PM-obt"/>
                             <constraint firstItem="XNn-gm-d2d" firstAttribute="top" secondItem="IKG-0T-0rF" secondAttribute="bottom" constant="13" id="IMJ-q6-QPj"/>
+                            <constraint firstItem="bUs-ss-o9h" firstAttribute="top" secondItem="XNn-gm-d2d" secondAttribute="bottom" constant="17" id="NuI-iG-nCe"/>
+                            <constraint firstItem="bUs-ss-o9h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Sbg-TA-x1g"/>
                             <constraint firstItem="GPr-U0-xeN" firstAttribute="trailing" secondItem="XNn-gm-d2d" secondAttribute="trailing" id="Tgp-2O-kdY"/>
                             <constraint firstItem="yt2-vK-TyQ" firstAttribute="top" secondItem="dLh-El-xeB" secondAttribute="top" constant="3" id="UZb-76-xbi"/>
+                            <constraint firstItem="2G1-sO-8iU" firstAttribute="top" secondItem="XNn-gm-d2d" secondAttribute="bottom" constant="17" id="afr-vA-ahy"/>
                             <constraint firstItem="yt2-vK-TyQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dnb-De-mne"/>
                             <constraint firstItem="IKG-0T-0rF" firstAttribute="top" secondItem="GPr-U0-xeN" secondAttribute="bottom" constant="14" id="g5k-RS-s1z"/>
                             <constraint firstItem="9Ls-qW-5GU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hpo-go-pJ3"/>
@@ -202,6 +218,7 @@
                         <outlet property="inputTextField" destination="IKG-0T-0rF" id="ERu-7M-5fx"/>
                         <outlet property="onePersonLabel" destination="NZt-UQ-LRM" id="qGl-Xf-JsT"/>
                         <outlet property="threePersonLabel" destination="aCJ-qU-66d" id="AMZ-S7-H1K"/>
+                        <outlet property="tipLabel" destination="2G1-sO-8iU" id="BYY-9c-FnP"/>
                         <outlet property="tipPercentage" destination="XNn-gm-d2d" id="ISY-9p-WKa"/>
                         <outlet property="twoPersonLabel" destination="Oyb-M8-nct" id="ZwY-hV-4KR"/>
                     </connections>
