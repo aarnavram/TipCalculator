@@ -39,15 +39,25 @@ class ViewController: UIViewController {
     
     @IBAction func calculateValues(_ sender: AnyObject) {
         
-        let bill = Double(inputTextField.text!) ?? 0
+        //let bill = (Double(inputTextField.text!) ?? 0) as NSNumber
+        let bill = (Double(inputTextField.text!) ?? 0)
         let tip = bill * tipArray[tipPercentage.selectedSegmentIndex]
+        let tipNumber = NSNumber(value: Double(tip))
         let total = bill + tip
+        let totalNumberOne = NSNumber(value: Double(total))
+        let totalNumberTwo = NSNumber(value: Double(total/2))
+        let totalNumberThree = NSNumber(value: Double(total/3))
+        let totalNumberFour = NSNumber(value: Double(total/4))
         
-        tipLabel.text = String(format: "%.2f", tip)
-        onePersonLabel.text = String(format: "%.2f", total)
-        twoPersonLabel.text = String(format: "%.2f", total/2)
-        threePersonLabel.text = String(format: "%.2f", total/3)
-        fourPersonLabel.text = String(format: "%.2f", total/4)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        tipLabel.text = formatter.string(from: tipNumber)
+        //formatter.string(from: NSNumber(bill))
+        onePersonLabel.text = formatter.string(from: totalNumberOne)
+        twoPersonLabel.text = formatter.string(from: totalNumberTwo)
+        threePersonLabel.text = formatter.string(from: totalNumberThree)
+        fourPersonLabel.text = formatter.string(from: totalNumberFour)
     }
     
 
