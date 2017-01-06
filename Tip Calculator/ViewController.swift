@@ -44,7 +44,7 @@ class ViewController: UIViewController {
             
             let intValue = Int(timeInterval)
             if intValue < 600 {
-                inputTextField.text = "\(defaults.integer(forKey: "textField"))"
+                inputTextField.text = "\(defaults.double(forKey: "textField"))"
             }
         }
         tipPercentage.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
