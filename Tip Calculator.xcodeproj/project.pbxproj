@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01DC88C1E1EF6FC00C57B1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01DC88B1E1EF6FC00C57B1B /* SettingsViewController.swift */; };
 		A038FD961E1D6528002B2C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038FD951E1D6528002B2C50 /* AppDelegate.swift */; };
 		A038FD981E1D6528002B2C50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A038FD971E1D6528002B2C50 /* ViewController.swift */; };
 		A038FD9B1E1D6528002B2C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A038FD991E1D6528002B2C50 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A01DC88B1E1EF6FC00C57B1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A038FD921E1D6528002B2C50 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A038FD951E1D6528002B2C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A038FD971E1D6528002B2C50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 		A038FD891E1D6528002B2C50 = {
 			isa = PBXGroup;
 			children = (
+				A01DC88B1E1EF6FC00C57B1B /* SettingsViewController.swift */,
 				A038FD941E1D6528002B2C50 /* Tip Calculator */,
 				A038FD931E1D6528002B2C50 /* Products */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				A038FD981E1D6528002B2C50 /* ViewController.swift in Sources */,
 				A038FD961E1D6528002B2C50 /* AppDelegate.swift in Sources */,
+				A01DC88C1E1EF6FC00C57B1B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +306,7 @@
 				A038FDA61E1D6528002B2C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

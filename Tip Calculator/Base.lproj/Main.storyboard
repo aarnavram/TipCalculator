@@ -211,7 +211,14 @@
                             <outletCollection property="gestureRecognizers" destination="c6G-Wd-QrJ" appends="YES" id="m0m-ph-JRk"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="f5M-b9-cGV"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="f5M-b9-cGV">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="REI-Kp-cpg">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="K0u-c3-oh8" kind="show" id="tBK-Vz-5t6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backgrounImg" destination="9Ls-qW-5GU" id="tqA-Rb-lHb"/>
                         <outlet property="fourPersonLabel" destination="eCk-8N-PUW" id="y2l-Kt-idB"/>
@@ -231,6 +238,58 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Or1-Oa-Vs0">
+            <objects>
+                <viewController id="K0u-c3-oh8" customClass="SettingsViewController" customModule="Tip_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R6x-UE-JTI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ax6-99-ju0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rqK-ot-ojt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-sg-TId"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Default Tip Percentage" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02L-ty-okK">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EeY-9C-7gn">
+                                <segments>
+                                    <segment title="10 %"/>
+                                    <segment title="15 %"/>
+                                    <segment title="20 %"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="onValueChanged:" destination="K0u-c3-oh8" eventType="valueChanged" id="7Oy-QI-LvH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ut4-sg-TId" secondAttribute="trailing" id="2C3-xY-DqM"/>
+                            <constraint firstItem="ut4-sg-TId" firstAttribute="top" secondItem="R6x-UE-JTI" secondAttribute="bottom" id="A26-fm-yTA"/>
+                            <constraint firstItem="EeY-9C-7gn" firstAttribute="leading" secondItem="rqK-ot-ojt" secondAttribute="leadingMargin" id="A3E-Av-QDh"/>
+                            <constraint firstItem="Ax6-99-ju0" firstAttribute="top" secondItem="ut4-sg-TId" secondAttribute="bottom" id="Nb5-BN-gzk"/>
+                            <constraint firstItem="EeY-9C-7gn" firstAttribute="centerX" secondItem="02L-ty-okK" secondAttribute="centerX" id="anw-6e-dba"/>
+                            <constraint firstItem="02L-ty-okK" firstAttribute="top" secondItem="R6x-UE-JTI" secondAttribute="bottom" constant="66" id="cVO-lj-ANw"/>
+                            <constraint firstItem="ut4-sg-TId" firstAttribute="leading" secondItem="rqK-ot-ojt" secondAttribute="leading" id="gFF-xw-RmA"/>
+                            <constraint firstItem="EeY-9C-7gn" firstAttribute="trailing" secondItem="rqK-ot-ojt" secondAttribute="trailingMargin" id="i6i-5Z-rY9"/>
+                            <constraint firstItem="EeY-9C-7gn" firstAttribute="top" secondItem="02L-ty-okK" secondAttribute="bottom" constant="20" id="ml3-wj-MNh"/>
+                            <constraint firstItem="EeY-9C-7gn" firstAttribute="centerX" secondItem="rqK-ot-ojt" secondAttribute="centerX" id="zWJ-ce-xIT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defaultSegControl" destination="EeY-9C-7gn" id="9ID-w2-dAL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDX-rT-2yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="142.57871064467767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z6l-64-Fyg">

@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var tipPercentage: UISegmentedControl!
     @IBOutlet weak var backgrounImg: UIImageView!
     let tipArray = [0.1, 0.15, 0.2]
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var onePersonLabel: UILabel!
     @IBOutlet weak var twoPersonLabel: UILabel!
@@ -26,6 +28,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         inputTextField.becomeFirstResponder()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tipPercentage.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
+        calculateValues(UIButton.self) 
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -39,8 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func calculateValues(_ sender: AnyObject) {
         
-        //let bill = (Double(inputTextField.text!) ?? 0) as NSNumber
-        let bill = (Double(inputTextField.text!) ?? 0)
+        let bill = Double(inputTextField.text!) ?? 0
         let tip = bill * tipArray[tipPercentage.selectedSegmentIndex]
         let tipNumber = NSNumber(value: Double(tip))
         let total = bill + tip
@@ -53,7 +62,6 @@ class ViewController: UIViewController {
         formatter.numberStyle = .currency
         
         tipLabel.text = formatter.string(from: tipNumber)
-        //formatter.string(from: NSNumber(bill))
         onePersonLabel.text = formatter.string(from: totalNumberOne)
         twoPersonLabel.text = formatter.string(from: totalNumberTwo)
         threePersonLabel.text = formatter.string(from: totalNumberThree)
