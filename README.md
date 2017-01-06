@@ -22,8 +22,9 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [√] Ability to display total amounts owed for up to 4 people sharing a bill amount
-- [ ] List anything else that you can get done to improve the app functionality!
-
+* [√] Changed theme to a contrasting light and dark color scheme
+* [√] Changed settings page to a similar color scheme
+* [√] Added an App Icon
 
 ## Video Walkthrough 
 
@@ -35,7 +36,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+A major challenge was trying to deal with Dates to retain information .
 
 ## License
 
