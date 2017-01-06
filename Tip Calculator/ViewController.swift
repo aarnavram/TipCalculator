@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgrounImg: UIImageView!
     let tipArray = [0.1, 0.15, 0.2]
     let defaults = UserDefaults.standard
+    var changeTime: NSDate!
     
     @IBOutlet weak var onePersonLabel: UILabel!
     @IBOutlet weak var twoPersonLabel: UILabel!
@@ -23,6 +24,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var fourPersonLabel: UILabel!
     
     @IBOutlet weak var tipLabel: UILabel!
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,8 +36,19 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if defaults.object(forKey: "date")  != nil {
+             let closeDate = defaults.object(forKey: "date") as! NSDate
+        
+            // convert Date to TimeInterval (typealias for Double)
+            let timeInterval = Date().timeIntervalSince(closeDate as Date)
+            
+            let intValue = Int(timeInterval)
+            if intValue < 600 {
+                inputTextField.text = "\(defaults.integer(forKey: "textField"))"
+            }
+        }
         tipPercentage.selectedSegmentIndex = defaults.integer(forKey: "defaultTip")
-        calculateValues(UIButton.self) 
+        calculateValues(self)
     }
     
     
@@ -66,6 +82,9 @@ class ViewController: UIViewController {
         twoPersonLabel.text = formatter.string(from: totalNumberTwo)
         threePersonLabel.text = formatter.string(from: totalNumberThree)
         fourPersonLabel.text = formatter.string(from: totalNumberFour)
+        defaults.set(Date(), forKey: "date")
+        defaults.set(Int(bill), forKey: "textField")
+        defaults.synchronize()
     }
     
 
